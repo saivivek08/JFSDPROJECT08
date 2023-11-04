@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7; /* Light gray background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  text-align: center; /* Center-align all text within the body */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1e90ff; /* Dodger Blue background color */
+}
+
+li {
+  float: left;
+  border-right: 1px solid #0076b8; /* Lighter border color */
+}
+
+li a {
+  display: block;
+  color: #fff; /* White text color */
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 20px; /* Increased padding for better touch targets */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+}
+
+.active {
+  background-color: #0076b8; /* Lighter blue for active link */
+}
+
+li a:hover {
+  background-color: #ff8c00; /* Dark Orange on hover */
+  color: #fff; /* White text on hover */
+}
+
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button {
+  background-color: #1e90ff; /* Dodger Blue background color */
+  border: none;
+  color: #fff; /* White text color */
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth background color transition on hover */
+  margin: 0 auto; /* Center the button horizontally */
+  display: block; /* Ensure it spans the width */
+}
+
+.button:hover {
+  background-color: #0076b8; /* Lighter blue on hover */
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+select,
+input[type=date],
+input[type=datetime-local] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0; /* Increased margin for better spacing */
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center; /* Center-align text within input fields */
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: block;
+  font-weight: bold;
+  color: #444; /* Dark gray text color */
+}
+
+input[readonly] {
+  background-color: #f0f0f0;
+  color: #777; /* Light gray text color */
+  cursor: not-allowed;
+  text-align: center; /* Center-align text within readonly fields */
+}
